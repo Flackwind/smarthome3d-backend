@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    ports: ["127.0.0.1:8090:8090"]
+    volumes: ["home-data:/app/data"]
+    environment:
+      SH3D_ORIGINS: ${SH3D_ORIGINS:-http://localhost:4200,http://127.0.0.1:4200,http://localhost:4300,http://127.0.0.1:4300,http://localhost:8080,http://127.0.0.1:8080}
+      # An explicit empty value disables HA. For OAuth use a URL also reachable by the browser.
+      SH3D_HA_URL: ${SH3D_HA_URL-http://host.docker.internal:8123}
+      SH3D_COOKIE_SECURE: "${SH3D_COOKIE_SECURE:-false}" # true behind HTTPS in production
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    restart: unless-stopped
+volumes:
+  home-data:
