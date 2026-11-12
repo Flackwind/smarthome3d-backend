@@ -102,3 +102,11 @@ Before updating source, back up, then repeat `up -d --build api` with the same e
 Complete Docker builds on new machines need target-environment testing; Compose syntax checks do not build images.
 
 Sources: [Spring Boot requirements](https://docs.spring.io/spring-boot/3.5/system-requirements.html), [servlet CSRF](https://docs.spring.io/spring-security/reference/6.5/servlet/exploits/csrf.html), [Home Assistant authentication](https://contributors.home-assistant.io/core/internals/auth-api/).
+
+## Support this project
+
+Smart Home 3D is still under active development. New features and improvements will be added over time.
+
+If you find this project useful, consider supporting its development with a donation. Thank you for your support!
+
+[Donate via PayPal](https://www.paypal.me/flackwind)
